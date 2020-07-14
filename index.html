@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous"> -->
+    <title>webサイト制作テンプレート</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>POPUP EFFECT- TRULY AMAZING</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <a href="#" class="btn popup-btn">Click Me</a>
+    </div>
+
+    <div class="popup-wrap">
+      <div class="popup-box">
+        <h1>Share us !</h1>
+        <h3>I will appreciate if you make one share just</h3>
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-linkedin"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-whatsapp"></i>
+        <a class="close-btn popup-close">x</a>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){//HTMLが読み込まれると機能する
+        $('.popup-btn').click(function(e){//クリックで作動
+          $('.popup-wrap').fadeIn(500);//0.5sでフェードイン
+          $('.popup-box').removeClass('transform-out').addClass('transform-in');//隠れていた要素を表示する
+          e.preventDefault();
+        });
+
+        $('.popup-close').click(function(e){//クリックで作動
+          $('.popup-wrap').fadeOut(500);//0.5sでフェードアウト
+          $('.popup-box').removeClass('transform-in').addClass('transform-out');//表示されていた要素を隠す
+          e.preventDefault();
+        });
+    });
+    </script>
+  </body>
+</html>
+
+<!--
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ -->
